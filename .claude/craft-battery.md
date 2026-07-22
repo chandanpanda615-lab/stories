@@ -71,11 +71,22 @@ In **profile** and **lens** mode the opposite applies: query unscoped deliberate
 
 Use `mcp__notebooklm__notebook_query`. **Reuse the returned `conversation_id`** across the calls in one run so context carries.
 
-Three calls for profile/lens, four for dissect. Not thirteen — each query is slow.
+Three calls for profile/lens, five for dissect (Query 0 first, then A–D). Not thirteen — each query is slow.
 
 End **every** query with this evidence clause, substituting `QUOTE_STYLE`:
 
 > "Quote their actual lines as evidence, rendered as: QUOTE_STYLE. If you cannot find a real line in the sources, say so plainly — do not invent a quote or present a paraphrase as verbatim."
+
+**Query 0 — the narrative spine (dissect mode only; run this FIRST, before Query A)**
+
+You cannot analyse a story for a reader who does not know it. Ask for the plain facts, not the craft:
+
+0a. **The world before page one.** Who the characters are — age, work, family position, whatever the story treats as already known. Where it is set. What happened *before* the story starts that the story assumes you know.
+0b. **What happens, in the order the story tells it.** Part by part, scene by scene. Say explicitly in the query: *"Do not reorder into chronology. Tell it in the order a first-time listener receives it."*
+0c. **The withholding schedule.** What the story keeps back, and the exact point each thing is released.
+0d. **What the listener believes at the end of each part that later turns out to be wrong.**
+
+Instruct the notebook to answer *"not stated in the sources"* rather than fill a gap with a guess — you need to know which facts the story genuinely withholds versus which ones you simply failed to ask for. 0d also feeds section 10; do not reconstruct it from fragments.
 
 **Query A — entry & architecture**
 1. **Opening move.** How do the first lines land? Does it open on a physical object, a line of dialogue, an action mid-motion, or a wound already in progress? What contract does the opening make — what question does it plant?
@@ -115,6 +126,17 @@ Create `OUTPUT_DIR` if missing (`mkdir -p` via Bash). Get today's date from the 
 > **Writer:** WRITER · **Mode:** <profile|dissect|lens|apply|seeds>
 > **Sources used:** <actual source titles> · **Date:** <today>
 
+## 0. The world                                (dissect only)
+(Cast, place, and the situation before page one. No spoilers — nothing the story
+hasn't established by its own opening. A reader who has never met this story
+should finish this section knowing who everyone is and what is at stake.)
+
+## 0.5 What happens                            (dissect only)
+(The story retold in HER order, preserving HER withholding. Where the story lets
+the reader believe something false, let them believe it here too — then take it
+away at the point the story does. Mark those beats inline:
+`← this is what you are meant to believe` / `← the turn`.)
+
 ## 1. The one-line signature
 (What they are actually doing, in a single sentence. Earn this line.)
 
@@ -141,6 +163,10 @@ Create `OUTPUT_DIR` if missing (`mkdir -p` via Bash). Get today's date from the 
 
 Sections 2–9 each carry four beats: **the move** → **why it works** → **their line** → **the meaning**.
 
+Any section discussing a specific scene opens with a one-line **"Where we are"** anchor before those four beats — which part, which place, what has just happened. The reader should never have to hold the whole story in their head to follow one section.
+
+Sections 0 and 0.5 are **dissect only**. In profile and lens mode there is no single story to retell — instead give every cited example one line of story context (*"In X, a woman who has spent twenty years lying to her daughter…"*) so no example arrives vague. One line, not a second template.
+
 In **apply** mode, sections 2–9 become: *what your draft does now → what they do → the specific fix, in one sentence.*
 In **lens** mode, keep only the relevant section and go deep — five examples of one lens beats one example of nine.
 In **seeds** mode, replace sections 2–9 with the premises; each seed names the structure it is built on.
@@ -153,6 +179,8 @@ In **seeds** mode, replace sections 2–9 with the premises; each seed names the
 - A lens genuinely absent → write "not visible in these sources". An honest gap beats a confident guess.
 - **Separate the writer from the performer.** If the sources are narrated or performed by someone else, delivery and vocal pauses belong to the performer; sentence construction, structure and dilemma belong to the writer. Say which is which where you can tell, and flag any standard sign-off or host tag as not the writer's line.
 - Analysis in English. Only the quoted lines follow `QUOTE_STYLE`.
+- **Write for a reader who has never met this story.** Every proper noun, object and place used in sections 1–14 must be introduced in section 0 or 0.5 first. A name whose first appearance in the file is section 7 is a defect. Craft analysis of a story the reader does not know is not analysis — it is vague assertion they have no way to check.
+- **Section 0.5 must not spoil what section 7 analyses.** Retell in story order; never state in the Part 1 paragraph a fact the story releases in Part 4. A craft file that *explains* a reversal the reader never got to fall for has failed at the exact thing it is describing.
 
 ## Step 6 — Report back
 
@@ -161,8 +189,7 @@ Give the saved path, then the strongest craft insight — stated as something th
 ## Step 7 — Automatic Git Sync
 
 After saving the craft file:
-1. Stage all changes in the project repository (`git add .`).
+1. Stage all changes in `C:\Users\chandan.p\Pictures\Stories` (`git add .`).
 2. Commit with a clear message: `feat(<writer_slug>): add craft notes for <story or topic> (<date>)`.
 3. Push changes to GitHub (`git push origin main`).
 4. Confirm to the user that their work has been committed and synced to GitHub.
-
