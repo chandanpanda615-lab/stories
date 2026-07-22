@@ -3,7 +3,110 @@
 > **Writer:** Anulata Raj Nair · **Mode:** dissect (single story)
 > **Source:** `#Relationships LAMBA SAFAR story by Anulata Raj Nair - The Neelesh Misra Project`
 > **Date:** 2026-07-22
-> **Scoping caveat:** `source_ids` are not exposed by the MCP tools, so this was scoped by explicit instruction ("answer only from LAMBA SAFAR"). Weaker than ID-scoping. Nothing in the four responses looked borrowed from another story — characters, objects and lines stayed consistent across all four queries, which is the main tell.
+> **Scoping caveat:** `source_ids` are not exposed by the MCP tools, so this was scoped by explicit instruction ("answer only from LAMBA SAFAR"). Weaker than ID-scoping. Nothing in the five responses looked borrowed from another story — characters, objects and lines stayed consistent across every query, which is the main tell.
+>
+> **Read §0 and §0.5 first.** They exist so the craft sections are checkable rather than asserted. §0.5 preserves the story's own withholding — it will let you believe something false, on purpose, for exactly as long as she does.
+
+---
+
+## 0. The world
+
+Deliberately thin, because **this story withholds most of its own cast.** At the opening you are given two people and nothing else; everyone who matters arrives later, and that is the design.
+
+**Akhila** — mid-to-late thirties. Lives in **Trichy**, Tamil Nadu — a city that is hot even in March. What she does for a living is never stated. Every morning before dawn she draws a *kolam* in rice flour in the courtyard, without fail.
+
+**Vini** — eighteen. Studying or working is never stated. She has been told, all her life, that Akhila **adopted her from an orphanage when she was one year old**. She believes it. And every birthday it surfaces as *thukraye jaane ka dukh* — the specific grief of having been given away by people who did not want her.
+
+That is the whole world you get. No father, no grandfather, no history — the story hands those over later, one at a time, and each handover is a structural event rather than an exposition.
+
+---
+
+## 0.5 What happens
+
+*Told in her order, not in chronological order. What she withholds, this section withholds.*
+
+### The morning
+
+A hot March morning in Trichy. Akhila wipes sweat from her own forehead and then her daughter's with the pallu of her raw-turmeric-coloured cotton saree. She draws the kolam. An ordinary day in a life that is visibly tidy and visibly tired.
+
+### The evening — the photograph
+
+After the evening aarti, Vini is in the study going through old childhood albums. A photograph that had been slipped behind another one works loose and drops onto the carpet.
+
+Nobody chose to show it to her. It falls.
+
+It is a photograph of **Akhila in a hospital bed, holding a newborn.**
+
+> *"Kabhi kisi tasveer ke peechhe dabi yeh purani tasveer nikal kar neeche kaleen par gir gayi"*
+> "This old photograph, pressed behind some other picture, slipped out and fell onto the carpet."
+
+Vini takes it straight to her mother.
+
+> *"Amma tum toh kehti thi ki tumne mujhe god liya hai aur tab main poore ek saal ki thi phir yeh tasveer..."*
+> "Amma, you always said you adopted me when I was a full one year old — then what is this photograph…"
+
+**← the adoption you were told about for the whole first movement is gone**
+
+### The silence — eighteen years fall through it
+
+Akhila does not answer. The room goes quiet, and the story leaves the present entirely.
+
+> *"Akhila to jaise kisi lambi yatra par nikal gayi thi. Atharah baras lambi yatra..."*
+> "It was as if Akhila had set out on a long journey. An eighteen-year-long journey…"
+
+Inside it: Akhila at **eighteen**, pregnant. The man is **Bhushan**, a distant relative of a friend — and the moment marriage and responsibility were spoken aloud, he vanished. He ignored her calls. He never appears in person in this story at any point.
+
+And her father — **Krishnan**, whom the story will only ever call **Nana** — was not a tyrant. When she was unwell in early pregnancy he made her *rasam rice.* **← the turn: she did not flee cruelty**
+
+She left his house anyway, an unwed mother, twenty years ago. She has not seen him since.
+
+*(The story's own arithmetic is loose — twenty years since she left, Vini is eighteen, Akhila was eighteen when she conceived. It does not reconcile precisely and the source does not tidy it.)*
+
+### The night — Vini goes
+
+Vini leaves the house silently that night. She leaves a note on the table and nothing else. **How she found her grandfather's address is never stated in the source.**
+
+### The journey
+
+A bus, out of Trichy, into Kerala. What she finds at the other end is a house going to ruin — paint peeling, an old man's silence around it, and a nameplate under a thick layer of dust:
+
+**KRISHNAN**
+
+He opens the door to a stranger.
+
+> *"Kisse milne aayi ho, yahan koi nahi rehta"*
+> "Who have you come to meet? Nobody lives here."
+
+She asks for a glass of water, follows him in, and tells him who she is.
+
+> *"Nana main Vini, aapki beti... I mean aapki Akhila ki beti"*
+> "Nana, I'm Vini, your daughter… I mean, your Akhila's daughter."
+
+He stumbles. Sits her down. Takes her rough hands in his and cries without sound — and says he had always known Akhila would go through with the birth.
+
+### Trichy — the wrong fear
+
+Akhila wakes to find her daughter gone. A childhood friend telephones: Vini left missed calls on her phone early that morning.
+
+And Akhila's mind goes straight to the worst place.
+
+> *"kya woh Bhushan yaane apne pita ko khojne gayi thi..."*
+> "Had she gone looking for Bhushan — her father…?"
+
+**← you are inside her fear, so you believe it too**
+
+### The threshold
+
+Akhila reaches her father's house after twenty years — and before she can go in, she hears it: Vini and Nana, inside, singing a bhajan together.
+
+She gets as far as the doorstep and stops.
+
+> *"Akhila wahi dehri par baith gayi thi, ek bada lamba safar tay kiya tha, thak gayi thi"*
+> "Akhila sat down right there on the threshold. She had completed a very long journey. She was tired."
+
+Her father looks at her. He does not shout and he does not forgive her out loud. He smiles, goes inside, and starts making coffee — **for both of them.**
+
+*(A note on one unresolved reading: this pass has the flight motivated as protecting her child from her father's anger; the earlier pass had it as sparing a father she adored the shame of an unwed daughter. The source supports the warmth of the household either way — the rasam rice is not in dispute — but the direction of the protection is genuinely ambiguous between the two readings. §7 below argues the second. Treat that as a reading, not a settled fact.)*
 
 ---
 
@@ -14,6 +117,8 @@
 ---
 
 ## 2. How she opens
+
+**Where we are.** The first lines. A hot March morning in Trichy, before you know anyone's name.
 
 **The move.** No dialogue, no stated wound. She opens on a woman's hand wiping sweat with the end of her saree — a body mid-motion, in heat, alone, at work.
 
@@ -48,6 +153,8 @@ Three people, each holding what another needs, none able to ask.
 ---
 
 ## 4. Where she pauses — and what she withholds
+
+**Where we are.** That same evening, the study, after the aarti.
 
 **The move.** The photograph falls out of the album onto the carpet. Vini stares. And the story **stops** — the room goes silent and Akhila leaves the present entirely.
 
@@ -110,6 +217,8 @@ Literally false — he lives there. He means *I stopped counting as a person twe
 
 ## 7. The perspective turn
 
+**Where we are.** Inside the eighteen-year flashback that opens when Akhila goes silent.
+
 **Who we judge:** Akhila. She lied to her child for eighteen years and abandoned a father who loved her.
 
 **How the turn is prepared:** before it lands, the flashback shows the father making her *rasam rice* when she was unwell in early pregnancy. Small, specific, tender. That detail is load-bearing — it establishes that the home she fled was *warm*.
@@ -126,6 +235,8 @@ Not rage. Grief. He wasn't angry, he was waiting.
 ---
 
 ## 8. How she lands it
+
+**Where we are.** The last scene. Krishnan's doorstep in Kerala, Vini and Nana singing inside.
 
 **The move.** Akhila arrives after twenty years and **says nothing.** She sits down on the threshold. Her father looks at her, smiles, and goes inside to make coffee for two.
 
@@ -152,6 +263,8 @@ Long, flowing sentences that braid a physical action to an interior state in the
 ---
 
 ## 10. Where she points your attention
+
+**Where we are.** The morning after Vini disappears, and the whole journey that follows it.
 
 **The deliberate misdirection — and it's the best structural trick in the story.**
 
