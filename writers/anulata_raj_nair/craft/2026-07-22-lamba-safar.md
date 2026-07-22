@@ -25,11 +25,11 @@ That is the whole world you get. No father, no grandfather, no history — the s
 
 *Told in her order, not in chronological order. What she withholds, this section withholds.*
 
-### The morning
+### The morning `[Assumption Set: Baseline]`
 
 A hot March morning in Trichy. Akhila wipes sweat from her own forehead and then her daughter's with the pallu of her raw-turmeric-coloured cotton saree. She draws the kolam. An ordinary day in a life that is visibly tidy and visibly tired.
 
-### The evening — the photograph
+### The evening — the photograph `[Assumption Shift]`
 
 After the evening aarti, Vini is in the study going through old childhood albums. A photograph that had been slipped behind another one works loose and drops onto the carpet.
 
@@ -45,9 +45,10 @@ Vini takes it straight to her mother.
 > *"Amma tum toh kehti thi ki tumne mujhe god liya hai aur tab main poore ek saal ki thi phir yeh tasveer..."*
 > "Amma, you always said you adopted me when I was a full one year old — then what is this photograph…"
 
-**← the adoption you were told about for the whole first movement is gone**
+**← the adoption you were told about for the whole first movement is gone**  
+*Why withheld:* Akhila withheld Vini's birth origin for 18 years to shield her daughter from the stigma of illegitimacy and hide her own past trauma.
 
-### The silence — eighteen years fall through it
+### The silence — eighteen years fall through it `[Withholding Lifted: The Hidden Past]`
 
 Akhila does not answer. The room goes quiet, and the story leaves the present entirely.
 
@@ -62,11 +63,11 @@ She left his house anyway, an unwed mother, twenty years ago. She has not seen h
 
 *(The story's own arithmetic is loose — twenty years since she left, Vini is eighteen, Akhila was eighteen when she conceived. It does not reconcile precisely and the source does not tidy it.)*
 
-### The night — Vini goes
+### The night — Vini goes `[Action / Catalyst]`
 
 Vini leaves the house silently that night. She leaves a note on the table and nothing else. **How she found her grandfather's address is never stated in the source.**
 
-### The journey
+### The journey `[The Reunion Encounter]`
 
 A bus, out of Trichy, into Kerala. What she finds at the other end is a house going to ruin — paint peeling, an old man's silence around it, and a nameplate under a thick layer of dust:
 
@@ -84,7 +85,7 @@ She asks for a glass of water, follows him in, and tells him who she is.
 
 He stumbles. Sits her down. Takes her rough hands in his and cries without sound — and says he had always known Akhila would go through with the birth.
 
-### Trichy — the wrong fear
+### Trichy — the wrong fear `[Narrator Misdirection]`
 
 Akhila wakes to find her daughter gone. A childhood friend telephones: Vini left missed calls on her phone early that morning.
 
@@ -93,9 +94,10 @@ And Akhila's mind goes straight to the worst place.
 > *"kya woh Bhushan yaane apne pita ko khojne gayi thi..."*
 > "Had she gone looking for Bhushan — her father…?"
 
-**← you are inside her fear, so you believe it too**
+**← you are inside her fear, so you believe it too**  
+*Why withheld:* The narrative suppresses Vini's real destination until now, letting the reader experience Akhila's exact internal dread.
 
-### The threshold
+### The threshold `[Climax & Reconciliation]`
 
 Akhila reaches her father's house after twenty years — and before she can go in, she hears it: Vini and Nana, inside, singing a bhajan together.
 
@@ -107,6 +109,18 @@ She gets as far as the doorstep and stops.
 Her father looks at her. He does not shout and he does not forgive her out loud. He smiles, goes inside, and starts making coffee — **for both of them.**
 
 *(A note on one unresolved reading: this pass has the flight motivated as protecting her child from her father's anger; the earlier pass had it as sparing a father she adored the shame of an unwed daughter. The source supports the warmth of the household either way — the rasam rice is not in dispute — but the direction of the protection is genuinely ambiguous between the two readings. §7 below argues the second. Treat that as a reading, not a settled fact.)*
+
+---
+
+#### 📌 Linear Timeline vs. Narrative Sequence
+
+| Historical Chronology (Real Order) | Narrative Order (As Revealed to Reader) | Craft Function |
+| :--- | :--- | :--- |
+| 1. Akhila gets pregnant at 18; Bhushan abandons her. | 1. Akhila & 18-year-old Vini in Trichy (`Kolam` routine). | **Establishes baseline normal life.** |
+| 2. Father (Nana) cares for her with *rasam rice*. | 2. Vini finds photo of newborn in study album. | **Shatters adoption cover story.** |
+| 3. Akhila leaves Kerala to spare Nana shame; gives birth to Vini. | 3. 18-year flashback: Bhushan's escape & Nana's gentleness. | **Replaces cruelty expectation with love/regret.** |
+| 4. Raises Vini under the lie that she was adopted at age 1. | 4. Vini flees to Nana's ruined Kerala house. | **Forces generation reconciliation.** |
+| 5. Photo falls out 18 years later. | 5. Akhila fears Vini sought Bhushan; finds her with Nana. | **Misdirection resolved in warmth.** |
 
 ---
 

@@ -38,7 +38,7 @@
 
 *Told in her order, not in chronological order. What she withholds, this section withholds.*
 
-### Part 1 — the platform, and the woman in the magenta saree
+### Part 1 — the platform, and the woman in the magenta saree `[Assumption Set / Narrator Misdirection]`
 
 Night. A railway announcement. Safia and Bala at a wrought-iron bench, mid-argument — she is leaving, he is trying to stop her, and he is the one who will have to face her father in the morning. She boards.
 
@@ -58,10 +58,11 @@ The train slows at a station called **Venkata Narasimha Rajuvari Peta**. Safia l
 She runs off the train after her.
 
 > "Chehra achchhe se dekha nahi tha maine, lekin vah aurat ammi ke siwa aur koi nahi thi"
-> *I hadn't seen the face properly — but that woman was no one but Ammi.*
-> **← this is what you are meant to believe**
+> *I hadn't seen the face properly — but that woman was no one but Ammi.*  
+> **← this is what you are meant to believe**  
+*Why withheld:* Safia's perception is clouded by 13 years of grief and resentment, creating a false visual match for her missing mother.
 
-### Part 2 — the lookalike, the missed train, the diary
+### Part 2 — the lookalike, the missed train, the diary `[Assumption Shift]`
 
 > "Vah ammi nahi thi, aankhon ko dhokha hua tha shayad"
 > *It wasn't Ammi. My eyes had deceived me, I suppose.*
@@ -84,7 +85,7 @@ The rain stops. Dripping water, the occasional train. Nothing happens for a whil
 
 They sleep in the waiting room. In the morning he has already bought tickets — a train to Bangalore that will put her down at **Tindivanam**.
 
-### Part 3 — Kanchipuram
+### Part 3 — Kanchipuram `[Building Intimacy / The Apparent Departure]`
 
 The local train. A child comes through selling trinkets, and Arhaan buys her cheap earrings and a necklace; she takes them mostly to prove she doesn't want them.
 
@@ -106,7 +107,7 @@ In her diary she finds a note he has left on the last page.
 
 The train reaches Tindivanam.
 
-### Part 4 — Tindivanam
+### Part 4 — Tindivanam `[Withholding Lifted: The Hidden Truth]`
 
 Rain. An auto. Her mother's door.
 
@@ -130,8 +131,9 @@ Safia follows her.
 She finds her mother sitting on the floor with a small suitcase open in front of her. A cloth doll cut out of Ammi's own Banarasi saree. A plastic camera from a fair. A crocheted frock. Safia's first drawing.
 
 > "Tumhare abbu tumhe mujhko dene ko kisi tarah taiyar hi nahi hue — na tumse milne diya, na tumko dekhne diya"
-> *Your father wouldn't agree to give you to me on any terms — he didn't let me meet you, didn't let me see you.*
-> **← the turn**
+> *Your father wouldn't agree to give you to me on any terms — he didn't let me meet you, didn't let me see you.*  
+> **← the turn**  
+*Why withheld:* Safia grew up hearing Abbu's narrative that Ammi abandoned them voluntarily. The truth was withheld by Abbu to maintain control over Safia.
 
 She stays two days. At some point her hand goes into her pocket and the cheap earrings tangle in her fingers, and that is how she finds out she misses him. The Jolly on her palm has begun to fade; she goes over it again with a pen.
 
@@ -141,6 +143,18 @@ Then she leaves.
 > *I'll come tomorrow, and then we'll talk about everything — but right now I have to go and meet someone else.*
 
 **What the serial deliberately never resolves:** Abbu and the June marriage are never settled on-page — no confrontation, no phone call, nothing. Whether Ammi has another household now is never stated. Whether Safia finds Arhaan is not shown. She owes him thirty-five rupees for a ticket, and the story ends with her going to pay it.
+
+---
+
+#### 📌 Linear Timeline vs. Narrative Sequence
+
+| Historical Chronology (Real Order) | Narrative Order (As Revealed to Reader) | Craft Function |
+| :--- | :--- | :--- |
+| 1. Ammi forced out by Abbu 13 years ago; Abbu denies her access to Safia. | 1. Safia running away on train, harboring 13 years of hatred towards Ammi. | **Establishes protagonist's fierce bias & trauma.** |
+| 2. Ammi keeps a secret suitcase of Safia's childhood trinkets in Tindivanam. | 2. False visual sighting of woman in magenta saree; train missed. | **Forces catalyst interaction with Arhaan.** |
+| 3. Abbu arranges forced June marriage; Safia decides to run. | 3. Arhaan challenges her grudge; leads her to Tindivanam. | **Acts as emotional bridge & truth catalyst.** |
+| 4. Safia travels across South India with Arhaan. | 4. Confrontation with Ammi & discovery of saved childhood suitcase. | **Shatters lifelong belief that Ammi abandoned her.** |
+| 5. Confrontation reveals Abbu's lies & Ammi's hidden love. | 5. Open ending: Safia goes to seek Arhaan, leaving forced marriage unresolved. | **Shifts focus from past resentment to future self-agency.** |
 
 ---
 
