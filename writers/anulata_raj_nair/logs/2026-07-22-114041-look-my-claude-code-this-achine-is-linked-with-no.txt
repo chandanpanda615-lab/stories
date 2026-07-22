@@ -1,0 +1,1475 @@
+╭─── Claude Code v2.1.217 ─────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting        │
+│                Welcome back Chandan!               │ started                 │
+│                                                    │ Ask Claude to create a… │
+│                       ▐▛███▜▌                      │ ─────────────────────── │
+│                      ▝▜█████▛▘                     │ What's new              │
+│                        ▘▘ ▝▝                       │ Added emoji shortcode … │
+│      Opus 4.8 · Claude Pro ·                       │ Added warnings when tr… │
+│      chandanpanda615@gmail.com's Organization      │ Fixed a memory leak wh… │
+│        ~\Pictures\Anulata_Raj_nair_Stories         │ /release-notes for more │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+  ⎿  SessionStart:startup says: # claude-mem status
+
+     This project has no memory yet. The current session will seed it; 
+     subsequent sessions will receive auto-injected context for relevant past 
+     work.
+
+     Memory injection starts on your second session in a project.
+
+     `/learn-codebase` is available if the user wants to front-load the entire 
+     repo into memory in a single pass (~5 minutes on a typical repo, optional).
+     Otherwise memory builds passively as work happens.
+
+     Live activity: http://localhost:37777
+     How it works: `/how-it-works`
+
+     This message disappears once the first observation lands.
+
+     View Observations Live @ http://localhost:37777
+
+> look My claude code this achine is linked with NoteboookLm , one of the great 
+  writter I have seen over hte months whose stories I hear day and  day out is  
+  ANulata Raj Nair , fromm  youtube  I will push the videoes in to the          
+  notebooklm and I want you to  connect the claude code with Notebooklm to get  
+  details of her story telling , how she think where she emphasizes the human   
+  relationships , the pauses , the dilemmas , ,reading between the lines and    
+  more importanly the reading between the lines , how she starts the stries ,   
+  shows the other perspctives all those this create a command or what ever      
+  slash command  I will put the command refer the notebook and claude will give 
+  me the details like a researcher , a story teller not generic you undestood?  
+  plan think hard                                                               
+
+● I'll start by checking what's actually available — the NotebookLM MCP
+  connection and your existing notebooks.
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Good — there's already a /lecture command doing NotebookLM→markdown. Let me
+  read it and check your notebooks.
+
+  Read 1 file, called notebooklm (ctrl+o to expand)
+
+● Two things found:
+
+  1. NotebookLM MCP is installed and wired up — but auth has expired:
+  Authentication expired. Run notebooklm-mcp-server auth. I can't see your
+  notebooks until that's refreshed (it's an interactive browser login, so you'll
+  need to run it).
+  2. There's already a /lecture command doing NotebookLM → markdown notes.
+  That's the pattern to reuse — but it's built for podcasts/lectures
+  (timestamps, host questions). Wrong lens for fiction craft. This needs its own
+  command.
+
+  Before I write the plan, three things that change what I build:
+
+● User answered Claude's questions:
+  ⎿  · What should the command do with her craft once it extracts it? → Analyse 
+     only (researcher mode), Also apply to my writing, Also generate story 
+     seeds, look the main goal is to do the same things pick the writtig stle 
+     fall in love with the story tellling , understand the writting along with 
+     the writer 
+     · When quoting her actual lines as evidence, what language? → Hindi line 
+     plus english meaning but HInglish written hard to read hindi 
+     · Where should the output go? → Both: on screen + saved file
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Project folder is empty (just settings). Global command it is — matches where
+  /lecture lives, works from anywhere.
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Plan written. One file, five modes, reusing the /lecture pattern.
+
+  Two honest caveats up front:
+
+  1. NotebookLM auth is dead right now. You'll need to run ! 
+  notebooklm-mcp-server auth yourself — it's an interactive browser login. Until
+  then I can't confirm your Anulata notebook exists or what's in it.
+  2. The quality ceiling is your sources, not the command. If those YouTube
+  videos land in NotebookLM as auto-generated Hindi transcripts, the
+  transcription will be rough — exact quotable lines may not survive. The
+  command is built to admit that ("not verbatim") rather than smooth over it
+  with invented quotes. If answers come back thin, the fix is better sources,
+  not a cleverer command.
+
+  The real substance is the nine-lens query battery — openings, relationship
+  architecture, texture, the pause, the loaded dilemma, subtext, the perspective
+  turn, the landing, her narrator voice. That's what stops it being generic: it
+  never asks "summarize this story," it asks nine specific craft questions and
+  demands her actual lines as evidence.
+
+● User approved Claude's plan
+  ⎿  Plan saved to: ~\.claude\plans\look-my-claude-code-joyful-nova.md · /plan 
+     to edit
+     /anulata — a craft-research command for Anulata Raj Nair's storytelling
+
+     Context
+
+     You listen to Anulata Raj Nair's stories daily and want to learn the 
+     writer, not just enjoy the story — how she opens, where she puts the pause,
+     how she builds the dilemma, how she makes you read between the lines, how
+     she hands the "wrong" character their reason. You're pushing her YouTube
+     videos into a NotebookLM notebook.
+
+     The NotebookLM MCP server is already connected to this machine. What's
+     missing is a command that interrogates that notebook as a craft researcher
+     — with a fixed battery of storytelling lenses — instead of asking a generic
+     "summarize this" question and getting a generic answer back.
+
+     /lecture (~/.claude/commands/lecture.md) already proves the pattern: find
+     notebook → run targeted queries → write a structured markdown file. But its
+     lenses are podcast lenses (timestamps, host questions, "is it worth
+     watching"). Fiction craft needs its own lenses. This is a sibling command,
+     not an edit to /lecture.
+
+     Outcome: one command, three modes (study / apply-to-my-draft / seeds), that
+     answers in English with her actual lines quoted in Hinglish (roman script)
+     + English meaning, and saves each run as a markdown file so a craft
+     library builds up in the stories folder.
+
+     ---
+     Blocker before anything works
+
+     NotebookLM auth is expired. notebook_list returns:
+     Authentication expired. Run notebooklm-mcp-server auth to re-authenticate.
+
+     You need to run this yourself (interactive browser login):
+
+     ! notebooklm-mcp-server auth
+
+     Then I call mcp__notebooklm__refresh_auth to pick up the new cookies. Until
+     that's done I cannot see whether the Anulata notebook exists, what it's
+     named, or how many videos are in it.
+
+     ---
+     The one file to create
+
+     C:\Users\chandan.p\.claude\commands\anulata.md
+
+     Global, same directory as lecture.md, so /anulata works from any folder —
+     not just Pictures\Anulata_Raj_nair_Stories.
+
+     Frontmatter:
+     ---
+     description: Research Anulata Raj Nair's storytelling craft from her
+     NotebookLM notebook — openings, pauses, dilemmas, subtext, perspective
+     shifts.
+     argument-hint: <story name | craft topic | "draft: <your text>" | "seeds: 
+     <theme>" | blank for full profile>
+     allowed-tools: mcp__notebooklm__notebook_list,
+     mcp__notebooklm__notebook_query, mcp__notebooklm__refresh_auth, Write,
+     Read, AskUserQuestion, Bash
+     ---
+
+     Step 1 — Find the notebook
+
+     - Call notebook_list. On an auth error, tell the user to run ! 
+     notebooklm-mcp-server auth, then call refresh_auth and retry once. Do not
+     guess or proceed without sources.
+     - Match "anulata" case-insensitively against notebook titles. Multiple
+     matches → AskUserQuestion. No match → show available titles and stop.
+     - Keep the notebook ID and the list of source titles — the source titles
+     are the story index used for mode detection in Step 2.
+
+     Step 2 — Pick the mode from $ARGUMENTS
+
+     ┌───────────────────────────────────────────┬─────────────────────────────┐
+     │            Argument looks like            │            Mode             │
+     ├───────────────────────────────────────────┼─────────────────────────────┤
+     │ empty                                     │ Profile — cross-story craft │
+     │                                           │  signature                  │
+     ├───────────────────────────────────────────┼─────────────────────────────┤
+     │ matches a source title                    │ Dissect — one story, all    │
+     │                                           │ lenses                      │
+     ├───────────────────────────────────────────┼─────────────────────────────┤
+     │ a craft word (opening, pause, dilemma,    │ Lens — that one lens across │
+     │ subtext, ending, relationships,           │  all stories                │
+     │ perspective…)                             │                             │
+     ├───────────────────────────────────────────┼─────────────────────────────┤
+     │ starts draft: / is pasted prose / is a    │ Apply — critique the user's │
+     │ file path                                 │  writing against her craft  │
+     ├───────────────────────────────────────────┼─────────────────────────────┤
+     │ starts seeds:                             │ Seeds — new premises built  │
+     │                                           │ on her structures           │
+     └───────────────────────────────────────────┴─────────────────────────────┘
+
+     Ambiguous → AskUserQuestion with the candidate readings. Don't assume.
+
+     Step 3 — The query battery (the actual substance)
+
+     Run against notebook_query, reusing conversation_id across calls so context
+     carries. Group into 3 calls, not 9 — each query is slow. Every query ends
+     with the same evidence clause:
+
+     ▎ "Quote her actual lines as evidence, written in roman-script Hinglish 
+     ▎ (not Devanagari), each followed by its English meaning. If you cannot 
+     ▎ find a real line in the sources, say so — do not invent or paraphrase a 
+     ▎ quote as if it were verbatim."
+
+     Query A — entry & architecture
+     1. Opening move — how the first lines land. Does she open on an object, a
+     line of dialogue, a domestic action, a wound already in progress? What
+     contract does the opening make with the listener?
+     2. Relationship architecture — who wants what from whom; the power
+     imbalance; the unspoken debt or obligation holding people together.
+     3. Texture — the concrete domestic detail (kitchen, chai, dupatta, a phone
+     that doesn't ring) she uses to carry emotion instead of stating it.
+
+     Query B — the pressure system
+     4. The pause / thehrāv — where she slows, stops, lets silence do the work.
+     What she deliberately withholds and for how long.
+     5. The dilemma — the moral fork with no clean answer. How she loads both
+     sides so neither choice is free.
+     6. Subtext — lines where what is said is not what is meant. The sentence
+     that means its opposite.
+
+     Query C — the turn & the landing
+     7. Perspective turn — the moment the character we were judging gets their
+     reason. Where in the story it lands, and how she sets it up so it reverses
+     the listener instead of excusing the character.
+     8. Ending — open vs resolved, and what the last line is doing (a question?
+     an image? a small ordinary act?).
+     9. Narrator's voice — sentence rhythm, distance from the character, direct
+     address to the listener, where she speaks as herself.
+
+     For Apply and Seeds modes: still run A–C first (grounded in her real
+     craft), then apply the extracted patterns to the user's draft/theme. Never
+     critique or generate from generic "emotional Hindi story" instincts — every
+     recommendation must trace to something the notebook actually showed.
+
+     Step 4 — Output
+
+     Answer on screen and write the file:
+
+     C:\Users\chandan.p\Pictures\Anulata_Raj_nair_Stories\craft\YYYY-MM-DD-<slug
+     >.md
+
+     Create the craft\ folder if missing. Structure:
+
+     # <Story or Topic> — Craft Notes
+     > **Writer:** Anulata Raj Nair · **Mode:**
+     <profile|dissect|lens|apply|seeds>
+     > **Sources used:** <source titles> · **Date:** <today>
+
+     ## 1. The one-line signature
+     (What she is actually doing, in a single sentence.)
+
+     ## 2. How she opens
+     ## 3. The relationships underneath
+     ## 4. Where she pauses — and what she withholds
+     ## 5. The dilemma (both sides, loaded)
+     ## 6. Reading between the lines
+     ## 7. The perspective turn
+     ## 8. How she lands it
+     ## 9. Her voice on the page
+
+     ## 10. What to steal
+     (3-6 techniques stated as moves you can make in your own writing, not as
+     admiration.)
+
+     ---
+     *Craft notes from the NotebookLM sources. Quotes are as the sources 
+     rendered them; anything unverified is marked "not verbatim".*
+
+     Sections 2–9 each carry: the move → why it works → her line in Hinglish → 
+     English meaning. In apply mode, sections 2–9 become "here's what your draft
+     does / here's what she does / here's the specific fix."
+
+     Step 5 — Honesty rules (non-negotiable)
+
+     - Only what the notebook returned. No invented quotes, no invented story
+     titles, no "she typically…" without evidence.
+     - If the sources are auto-generated YouTube transcripts, Hindi
+     transcription is often rough — say when a quote is uncertain rather than
+     smoothing it.
+     - If the notebook has too few videos to support a claim about her pattern,
+     say "one story is not a pattern" instead of generalizing.
+     - Analysis in English (per your global preference). Only her quoted lines
+     stay Hinglish.
+
+     ---
+     Verification
+
+     1. ! notebooklm-mcp-server auth → then refresh_auth → notebook_list returns
+     the Anulata notebook.
+     2. /anulata (blank) → profile mode. Check: does it name real source titles?
+     Are quotes Hinglish + gloss? Is the file at ...\craft\<date>-profile.md?
+     3. /anulata pauses → lens mode. Check it stays on the pause lens and
+     doesn't drift into a generic summary.
+     4. /anulata <one real story title from the list> → dissect mode.
+     5. /anulata draft: <two paragraphs of your own writing> → apply mode. Check
+     every note traces to a technique from steps 2–4, not generic writing
+     advice.
+     6. Negative check: ask about a story not in the notebook — it must say it
+     doesn't have it, not improvise.
+
+     ---
+     Deliberately skipped
+
+     - Accumulating CRAFT-PROFILE.md — the craft\ folder is the library. Add a
+     merged profile once there are 10+ files and cross-referencing gets
+     annoying.
+     - chat_configure custom prompt on the notebook — would tune NotebookLM
+     globally, but it changes your notebook's behaviour outside this command
+     too. The per-query instructions carry the same weight. Add if answers come
+     back shallow.
+     - Auto-adding YouTube URLs (notebook_add_url) — you said you push the
+     videos yourself. Add if that gets tedious.
+     - A second command per mode — one file, five modes. Split only if one
+     mode's instructions grow long enough to crowd the others.
+
+● Write(~\.claude\commands\anulata.md)
+  ⎿  Wrote 135 lines to ..\..\.claude\commands\anulata.md
+      1 ---
+        her NotebookLM notebook — openings, pauses, dilemmas, subtext, pe
+      3 argument-hint: <story name | craft topic | "draft: <your text>" |
+         "seeds: <theme>" | blank for full profile>
+        otebook_query, mcp__notebooklm__refresh_auth, Write, Read, AskUse
+      5 ---
+      7 You are running **/anulata** — a craft-research workflow on the s
+        toryteller **Anulata Raj Nair**.
+      9 You are not a summarizer. You are a craft researcher and a storyt
+        he user has heard her stories for months and want
+     … +207 lines (ctrl+o to expand)
+
+● Now let me verify what I can without live auth — that the command is where
+  Claude Code will find it, and that the auth CLI the command tells you to run
+  actually exists on your machine.
+
+  Listed 1 directory, called notebooklm 2 times (ctrl+o to expand)
+  ⎿  1 skill available
+
+● Done. /anulata is created at C:\Users\chandan.p\.claude\commands\anulata.md
+  and Claude Code has already registered it (it showed up in the available
+  skills list — that's the confirmation it parsed correctly).
+
+  Verified:
+  - Command file in place alongside lecture.md, frontmatter valid, command
+  registered
+  - The auth CLI genuinely exists at AppData/Roaming/npm/notebooklm-mcp-server,
+  so the instruction it gives you will work
+  - NotebookLM MCP server is configured in .claude.json
+
+  Not verified — and I can't: an actual run. I tried refresh_auth (cookies
+  reloaded from disk) then notebook_list again — still Authentication expired.
+  The cookies on disk are dead, not just unloaded. You need to run this
+  yourself:
+
+  ! notebooklm-mcp-server auth
+
+  Then just type /anulata and it'll do the rest.
+
+  What the command actually does: finds your Anulata notebook, then runs a fixed
+  nine-lens interrogation — opening move, relationship architecture, domestic
+  texture, the pause and what she withholds, the loaded dilemma, subtext, the
+  perspective turn, the landing, her narrator voice. Three grouped NotebookLM
+  queries sharing one conversation. Quotes come back in roman Hinglish with
+  English meaning underneath. Answer on screen plus a dated file in
+  Anulata_Raj_nair_Stories\craft\.
+
+  Five modes off one argument: blank = full profile, a story title = deep
+  dissect, a craft word like pauses = one lens across everything, draft: <your 
+  text> = your writing judged against her technique, seeds: <theme> = new
+  premises on her structures.
+
+  The honesty rules are the part I'd point at: it must mark garbled
+  auto-transcript quotes as uncertain, say "one story is not a pattern" when the
+  notebook is thin, and write "not visible in these sources" rather than
+  filling a heading with plausible-sounding craft talk. That's what keeps it
+  from drifting into the generic literary commentary you didn't want.
+
+  ▎ skipped: accumulating CRAFT-PROFILE.md, chat_configure tuning, auto-adding 
+  ▎ YouTube URLs — add when the craft folder passes ~10 files or answers come 
+  ▎ back shallow.
+
+✻ Crunched for 3m 52s
+
+> what to do now then shall I authenticate again?                               
+
+● Yes. Run this in your prompt:
+
+  ! notebooklm-mcp-server auth
+
+  It opens a browser for Google login. Once it finishes, tell me and I'll
+  re-check the connection — then /anulata is ready to go.
+
+  One thing worth confirming after auth: whether your Anulata videos are
+  actually in a notebook yet. If the notebook is empty or has only one or two
+  videos, the command will honestly tell you "one story is not a pattern" rather
+  than invent one — which is correct, but not very useful. More videos in the
+  notebook = sharper craft analysis.
+✻ Worked for 4s
+
+!  notebooklm-mcp-server auth                                                   
+  ⎿  Command did not complete within its 120s timeout and was moved to the
+     background (ID: bq1d1g4u8). Output is being written to: C:\Users\chandan.p\
+     AppData\Local\Temp\claude\C--Users-chandan-p-Pictures-Anulata-Raj-nair-Stor
+     ies\c219701a-b2c8-4903-b6d2-e1906ee498c0\tasks\bq1d1g4u8.output. You will
+     be notified when it completes. To check interim output, use Read on that
+     file path.
+
+> /anulata                                                                      
+
+● The auth command is still running in the background — it's waiting on your
+  browser login. Let me check where it's at and try the connection.
+
+  Read 1 file, called notebooklm (ctrl+o to expand)
+
+● Auth succeeded — cookies saved to
+  C:\Users\chandan.p\.notebooklm-mcp\auth.json. The server just needs to reload
+  them.
+
+  Called notebooklm 2 times (ctrl+o to expand)
+
+● Connected — 257 notebooks. One match for "anulata":
+
+  Gunahgaar | Written By Anulata Raj Nair | Neelesh Misra — 1 source.
+
+  That's the case I warned about. With a single story I cannot honestly produce
+  a profile (her cross-story signature), so I'm running dissect on this one
+  story instead and labelling it as such. Running the battery now.
+
+  Called notebooklm (ctrl+o to expand)
+
+> wait I ma pushing 20-30 strories but I want single story specific case also   
+
+● Right — dissect mode already exists for that. But there's a real weakness I
+  should fix before your 20-30 stories land: with many sources in one notebook,
+  NotebookLM will blend stories together unless the query is hard-scoped to one
+  source. My current wording ("pass source_ids if you can identify it") is too
+  soft — it'd give you mush.
+
+  Let me tighten that.
+
+  Read 1 file (ctrl+o to expand)
+
+● Update(~\.claude\commands\anulata.md)
+  ⎿  Added 11 lines
+      47  
+      48  In **apply** mode, if the argument is a file path, `Read` it fi
+          rst.
+      49  
+      50 +### Scoping a single story (dissect mode) — do not skip this   
+      51 +                                                               
+      52 +When the notebook holds many stories, an unscoped query makes N
+         +otebookLM **blend all of them into one averaged answer**. That 
+         +is the main failure mode of this command. In dissect mode:     
+      53 +                                                               
+      54 +1. Get the source list for the notebook. If `notebook_list` doe
+         +sn't expose individual source titles, ask the notebook directly
+         +: *"List every source in this notebook by its exact title, numb
+         +ered. Titles only, nothing else."*                             
+      55 +2. Match the user's argument to exactly one source title. Sever
+         +al plausible → `AskUserQuestion`. None → show the real titles a
+         +nd stop.                                                       
+      56 +3. **Pass that source's `source_ids` on every query.** This is 
+         +the reliable scope.                                            
+      57 +4. If `source_ids` cannot be resolved, fall back to naming the 
+         +story in every query plus this instruction: *"Answer ONLY from 
+         +the story '<title>'. Do not draw on any other story in this not
+         +ebook. If a point cannot be supported from that story alone, sa
+         +y so instead of borrowing from another."* Then say in your fina
+         +l output that scoping was by instruction, not by source ID — it
+         + is weaker and cross-contamination is possible.                
+      58 +                                                               
+      59 +In **profile** and **lens** mode the opposite applies: query un
+         +scoped across all sources deliberately, and **name which storie
+         +s** each pattern was observed in. A pattern claimed without nam
+         +ing at least two stories is not a pattern.                     
+      60 +                                                               
+      61  ## Step 3 — The query battery
+      62  
+      63  Use `mcp__notebooklm__notebook_query` against the notebook ID. 
+          **Reuse the returned `conversation_id`** across all three calls
+           so context carries forward.
+
+● Patched. Dissect now hard-scopes to a single source_id, and profile/lens mode
+  must name which stories a pattern came from — no claiming a pattern from one
+  story.
+
+  One thing to get right while you're uploading: put all 20-30 stories as
+  sources inside one notebook, not as 30 separate notebooks. Right now Gunahgaar
+  is its own notebook with 1 source. If each story becomes its own notebook,
+  profile mode has nothing to compare across and you lose the whole point — the
+  pattern only shows up when the stories sit side by side.
+
+  So either add the new stories into the existing Gunahgaar | Written By Anulata
+  Raj Nair | Neelesh Misra notebook (and rename it something like Anulata Raj 
+  Nair — Stories), or make one fresh notebook named for her and put all 20-30 in
+  there. I can rename it for you if you want.
+
+  One caveat worth knowing now: these are Neelesh Misra narrations. He's the
+  performer, she's the writer. When we analyse "the pause," some of it is her 
+  sentence construction and some is his delivery — those are different crafts,
+  and only the first is learnable from her. I've told the command to separate
+  the two where it can, but on audio transcripts that line gets blurry. Worth
+  keeping in mind when you read the notes.
+
+  Ping me when the uploads are done — then /anulata for the profile, or /anulata
+  Gunahgaar for a single story.
+
+✻ Worked for 39s
+
+● Background command " notebooklm-mcp-server auth" failed with exit code 1
+  ⎿  1 skill available
+
+● The background auth process exited with code 1. Let me check whether that
+  actually broke anything.
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Ignore it — auth is fine.
+
+  The tool launched two browser instances (you can see the doubled [Status]
+  output). One completed and saved 19 cookies to auth.json; the second was still
+  waiting for a login that never came and timed out when the browser closed.
+  That timeout is what produced exit code 1.
+
+  Proof it worked: after refresh_auth I listed 257 notebooks. Cookie file is on
+  disk, written at 10:50.
+
+  Nothing to redo. Still waiting on your uploads — tell me when the stories are
+  in, and whether you want me to rename that notebook so all of them live in one
+  place.
+
+✻ Sautéed for 19s
+
+> now look at Stories BY Anulata_Raj_Nair this note book containe around 160    
+  stories plan what and how to extract and tell me pick a story name tell me    
+  what section worth is pick top 10 stories their lesson and what ever we       
+  planned                                                                       
+
+● Let me find that notebook and see its actual state.
+
+  Called notebooklm (ctrl+o to expand)
+
+● Found it — but first, a correction worth knowing:
+
+  Stories BY Anulata_Raj_Nair — 113 sources, not 160. Same notebook ID as the
+  old Gunahgaar one, so you renamed it and added to it. Either ~47 uploads are
+  still processing/failed, or the count was an estimate. Worth checking on your
+  side.
+
+  Everything depends on getting the story index first — I can't plan extraction
+  or pick a top 10 without knowing what's actually in there. Let me pull it.
+
+  Called notebooklm (ctrl+o to expand)
+● The index is the real finding here. 110 titles came back, and it changes the
+  plan.
+
+  Called notebooklm (ctrl+o to expand)
+
+● Got it. Now let me save this and flag two problems I found in the output.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Write(craft\2026-07-22-top-10-craft-shortlist.md)
+  ⎿  Wrote 179 lines to craft\2026-07-22-top-10-craft-shortlist.md
+       1 # Anulata Raj Nair — Top 10 Stories to Study (Craft Shortlist)
+       2 
+         list)
+       4 > **Notebook:** `Stories BY Anulata_Raj_Nair` — 113 sources, 110
+          titles listed
+       6 > **Selection basis:** craft visibility, not popularity — spread
+          deliberately across her registers
+       7 
+       9 
+      10 ## Read this first — two data problems
+     … +300 lines (ctrl+o to expand)
+
+● Saved: C:\Users\chandan.p\Pictures\Anulata_Raj_nair_Stories\craft\2026-07-22-t
+  op-10-craft-shortlist.md
+
+  Two problems you need to know before trusting any of this
+
+  1. The notebook is not purely her work. Of 110 titles, about 73 explicitly 
+  credit Anulata Raj Nair. Roughly 37 carry no writer credit at all — most of
+  the Season 5 titles, and the whole Time Machine mythology set (Dhruv, Narad,
+  Yayati, Shakuntala, Savitri, Raja Harishchandra…).
+
+  This isn't theoretical. I asked for stories credited only to her, and it
+  handed back 'Khwaab Paheli' by Neelesh Misra — a title that names a different
+  writer — plus 'Naye Saal Ka Tohfa', which credits nobody. 2 of your 10 picks 
+  are of uncertain authorship. Both are marked in the file. Study a Neelesh
+  Misra story as hers and you learn the wrong lessons.
+
+  2. One quote is wrong. For Nani Ki Chakori, the "evidence" line is about a boy
+  named Viki and his shoes and tie — nothing to do with the
+  ribbons-and-feathers plot. The model admitted that source is fragmented. That
+  entry is unreliable.
+
+  Also: Gunahgaar appears twice as a duplicate source. Pyari Gudiya and Sneha
+  appear twice too (different shows/seasons — those are legitimate).
+
+  The ten, in one line each
+
+  ┌─────────────────┬───────────────┬───────────────────────────────────────┐
+  │      Story      │   Register    │              Steal this               │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Panchali Ka     │ Mythology     │ Escalating physical stake forces      │
+  │ Mann            │               │ internal confession                   │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Gunahgaar       │ Moral/crime   │ Predator-prey reversal — reader       │
+  │                 │               │ knows, narrator doesn't               │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Chain Ki Neend  │ Humour        │ Insomnia as the engine of moral       │
+  │                 │               │ correction                            │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Alice           │ Relationships │ Surface conflict is a decoy for the   │
+  │                 │               │ real one                              │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Pyari Gudiya    │ Horror        │ Repressed guilt projected onto an     │
+  │                 │               │ object                                │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Asavari         │ Motivational  │ Make the lover the antagonist's       │
+  │                 │               │ instrument                            │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Naye Saal Ka    │ Relationships │ Naive narrator exposes hypocrisy      │
+  │ Tohfa ⚠️        │               │ without sermon                        │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Khwaab Paheli   │ Relationships │ Recurring dream as a puzzle, not      │
+  │ ⚠️              │               │ atmosphere                            │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Lamba Safar     │ Relationships │ Daughter's flight rhymes with         │
+  │                 │               │ mother's flight                       │
+  ├─────────────────┼───────────────┼───────────────────────────────────────┤
+  │ Nani Ki Chakori │ Children's    │ Nature as active participant, not     │
+  │  ⚠️             │               │ backdrop                              │
+  └─────────────────┴───────────────┴───────────────────────────────────────┘
+
+  The strongest single craft insight across all ten: she almost never puts duty 
+  against a stranger. Asavari's bribe arrives through her boyfriend's hands.
+  Nandini's revenge target is a man going home to his daughter. The parents in
+  Naye Saal Ka Tohfa are exposed by their own child. She routes the moral
+  pressure through the relationship that costs most — that's why the dilemmas
+  have no clean side.
+
+  Extraction plan for the remaining ~100
+
+  Phase 1 — clean the corpus first. Everything downstream is poisoned otherwise.
+  Ask the notebook to split all 110 into credited to her vs no credit, then
+  either delete the uncredited sources or keep a written exclusion list. Also
+  delete the duplicate Gunahgaar. This is one query plus some clicking, and it's
+  the highest-value hour you'll spend.
+
+  Phase 2 — dissect the ten, one at a time. /anulata Gunahgaar scopes to that
+  single source and runs all nine lenses. One story per session, not ten at once
+  — the answers stay sharp when scoped.
+
+  Phase 3 — lens sweeps across the clean corpus. /anulata openings, /anulata 
+  endings, /anulata dilemma. This is where real patterns appear, because they're
+  measured across ~73 stories instead of guessed from one. This phase is what a
+  top-10 list cannot give you.
+
+  Phase 4 — apply. /anulata draft: <your writing> judged against the extracted
+  patterns.
+
+  Phase 1 is the gate. Want me to run the credited/uncredited split now so you
+  can clean it up?
+
+✻ Cooked for 5m 59s
+
+> cerdit to her , those all of her only , give me the list in a md file what    
+  are the story names thne we will decide so that we can run session by session 
+  mark the command as such when I type anulata it will give about her details   
+  when I type anulata plus story names its diffrent ball agme , it should       
+  specific tothe story , her qualiries , how she enables to reader here and     
+  what she wants the redader to focus , he beauty the pauses all specific to    
+  that stoy only understiid                                                     
+
+● Understood — all 110 are hers. Noted, moving on.
+
+  Building the index file now.
+
+● Write(craft\STORY-INDEX.md)
+  ⎿  Wrote 129 lines to craft\STORY-INDEX.md
+      1 # Anulata Raj Nair — Story Index
+      2 
+      3 > **Notebook:** `Stories BY Anulata_Raj_Nair` · 113 sources, **11
+      4 > **Built:** 2026-07-22
+      5 > ★ = on the top-10 craft shortlist · ⧉ = duplicate source in the
+         notebook
+      6 
+        ` — the command scopes to that one source only.
+      8 
+      9 ---
+     … +145 lines (ctrl+o to expand)
+
+● Now making the two behaviours explicit in the command, and adding the lens you
+  asked for — where she directs the reader's attention.
+
+  Read 1 file (ctrl+o to expand)
+
+● Update(~\.claude\commands\anulata.md)
+  ⎿  Added 5 lines
+      10  
+      11  Generic literary commentary is a failure of this command. Every
+           claim must trace to something the notebook actually returned.
+      12  
+      13 +**Two fundamentally different jobs — do not blur them:**       
+      14 +                                                               
+      15 +- **`/anulata` with no story name** → *the writer.* Her signatu
+         +re across the whole body of work. What is true of her generally
+         +.                                                              
+      16 +- **`/anulata <story name>` → *that story, and nothing else.***
+         + Not "her craft, illustrated by this story." The craft **of thi
+         +s one story**: what she does here specifically, how she pulls t
+         +he listener in *here*, what she is directing your attention tow
+         +ard *in this piece*, where the beauty sits *in these particular
+         + lines*, where these specific pauses fall. If a sentence in you
+         +r answer would be equally true of a different story of hers, it
+         + does not belong in a story-specific answer. Delete it and find
+         + what is only true here.                                       
+      17 +                                                               
+      18  The user's argument is: **$ARGUMENTS**
+      19  
+      20  ---
+
+● Update(~\.claude\commands\anulata.md)
+  ⎿  Added 6 lines
+       90  8. **The ending.** Open or resolved? What work is the final li
+           ne doing — asking a question, leaving an image, showing a smal
+           l ordinary act?
+       91  9. **The narrator's voice.** Sentence rhythm and length. How c
+           lose or far she stands from her character. Where she addresses
+            the listener directly, and where she speaks as herself.
+       92  
+       93 +**Query D — reader direction (dissect mode only; skip in profi
+          +le/lens)**                                                    
+       94 +10. **Where she points your attention.** At each stage of THIS
+          + story, what is she making the listener watch — and what is sh
+          +e quietly steering them away from until she's ready? Name the 
+          +moment she deliberately lets you believe something wrong.     
+       95 +11. **How she pulls you in, here.** The specific hooks in THIS
+          + story that make a listener unable to leave — a withheld name,
+          + an unanswered question, a promise made early and paid late. N
+          +ame them and where they fall.                                 
+       96 +12. **The beauty.** The two or three most beautiful lines in T
+          +HIS story specifically — not her prettiest lines generally. Sa
+          +y what makes each one land: the image, the rhythm, the restrai
+          +nt, the word she chose over the obvious one.                  
+       97 +13. **What she wants you to carry out.** After the last line, 
+          +what is the listener meant to be left holding? A question, a g
+          +uilt, a softening toward someone they had judged? What in the 
+          +text does that work?                                          
+       98 +                                                              
+       99  **apply** and **seeds** modes run A–C first anyway. The extrac
+           ted patterns are the standard you then judge or build against.
+            Never critique a draft or generate a premise from generic "em
+           otional Hindi story" instincts — every recommendation must poi
+           nt back to a technique the notebook actually showed you.
+      100  
+      101  ## Step 4 — Answer on screen, and save the file
+  ⎿  1 skill available
+
+  Read 1 file (ctrl+o to expand)
+  ⎿  1 skill available
+
+● Update(~\.claude\commands\anulata.md)
+  ⎿  Added 6 lines, removed 1 line
+      125  ## 8. How she lands it
+      126  ## 9. Her voice on the page
+      127  
+      128 -## 10. What to steal                                          
+      128 +## 10. Where she points your attention        (dissect mode on
+          +ly)                                                           
+      129 +## 11. How she pulls you in, here             (dissect mode on
+          +ly)                                                           
+      130 +## 12. The beauty — the lines worth rereading (dissect mode on
+          +ly)                                                           
+      131 +## 13. What she wants you to carry out        (dissect mode on
+          +ly)                                                           
+      132 +                                                              
+      133 +## 14. What to steal                                          
+      134  (3-6 techniques written as moves you can make in your own writ
+           ing — not as admiration.)
+      135  
+      136  ---
+
+● Both files are ready.
+
+  craft\STORY-INDEX.md — all 110 stories, grouped so you can pick sessions
+  sensibly:
+
+  ┌────────────────────────────────────┬───────┐
+  │               Group                │ Count │
+  ├────────────────────────────────────┼───────┤
+  │ The Neelesh Misra Project (tagged) │ 19    │
+  ├────────────────────────────────────┼───────┤
+  │ YKIB Season 5                      │ 17    │
+  ├────────────────────────────────────┼───────┤
+  │ YKIB Season 7                      │ 13    │
+  ├────────────────────────────────────┼───────┤
+  │ YKIB Season 3 / unlabelled         │ 12    │
+  ├────────────────────────────────────┼───────┤
+  │ Time Machine — mythology           │ 9     │
+  ├────────────────────────────────────┼───────┤
+  │ YKIB Season 4                      │ 7     │
+  ├────────────────────────────────────┼───────┤
+  │ YKIB Season 6                      │ 7     │
+  ├────────────────────────────────────┼───────┤
+  │ Kahaani Express                    │ 3     │
+  ├────────────────────────────────────┼───────┤
+  │ Magic Box (children's)             │ 2     │
+  ├────────────────────────────────────┼───────┤
+  │ Meri Pyaari Zindagi                │ 2     │
+  ├────────────────────────────────────┼───────┤
+  │ Standalone                         │ 15    │
+  └────────────────────────────────────┴───────┘
+
+  Three duplicate sources worth cleaning: Gunahgaar (identical, twice), Pyari 
+  Gudiya (standalone + In The Dark), Sneha (Project + YKIB S3). The last two
+  might be genuinely different recordings — your call.
+
+  The command now splits hard between the two jobs, exactly as you described:
+
+  - /anulata → the writer. Her signature across the body of work.
+  - /anulata Gunahgaar → that story and nothing else. I added a rule that does
+  the actual work: if a sentence would be equally true of a different story of 
+  hers, it doesn't belong — delete it and find what's only true here. That's
+  what stops it sliding back into general praise.
+
+  And four new lenses that only fire for a single story — the ones you asked
+  for:
+
+  - Where she points your attention — what she makes you watch, what she steers
+  you away from, and the moment she deliberately lets you believe something
+  wrong
+  - How she pulls you in, here — the specific hooks in this piece: a withheld
+  name, a question left open, a promise made early and paid late
+  - The beauty — the two or three most beautiful lines in this story, and why
+  each lands: the image, the rhythm, the restraint, the word chosen over the
+  obvious one
+  - What she wants you to carry out — what you're left holding after the last
+  line, and what in the text does that work
+
+  Thirteen lenses now on a single story, four queries. Slower than the
+  corpus-wide pass, but that's the point.
+
+  Say the word and I'll run the first one — /anulata Gunahgaar is the natural
+  start, since you already have the plot and dilemma from the shortlist and can
+  judge whether the deep pass tells you something the summary didn't.
+
+✻ Crunched for 1m 59s
+
+※ recap: You wanted to study Anulata Raj Nair's storytelling craft from your NotebookLM notebook. The /anulata command is built and the 110-story index plus a top-10 shortlist are saved. Next: run /anulata Gunahgaar for the first single-story deep pass. (disable recaps in /config)
+
+> do we need any claude.md instruction file so that we never loos the context ? 
+  not requierd at all ? for these kind of activities or it is good  enough      
+  ⎿  1 skill available
+
+● Fair question. Let me check what's already durable before adding anything.
+
+  Ran 1 shell command (ctrl+o to expand)
+● No CLAUDE.md needed. Here's why, honestly:
+
+  A CLAUDE.md is for context Claude needs by default, every session, regardless 
+  of task. Your operating instructions don't fit that shape — they're needed
+  only when you run /anulata, and the command file already carries all of them
+  and reloads in full on every single invocation. That's what a slash command
+  is. A CLAUDE.md would be a second copy of the same instructions, and two
+  copies drift apart the moment you edit one.
+
+  What's already permanent and survives any context loss:
+
+  ┌─────────────────────────────┬────────────────────────────────────────────┐
+  │            Thing            │               Where it lives               │
+  ├─────────────────────────────┼────────────────────────────────────────────┤
+  │ All 13 lenses, the modes,   │                                            │
+  │ scoping rules, honesty      │ ~/.claude/commands/anulata.md              │
+  │ rules                       │                                            │
+  ├─────────────────────────────┼────────────────────────────────────────────┤
+  │ The 110 story names,        │ craft\STORY-INDEX.md                       │
+  │ grouped                     │                                            │
+  ├─────────────────────────────┼────────────────────────────────────────────┤
+  │ Top-10 findings, dilemmas,  │ craft\2026-07-22-top-10-craft-shortlist.md │
+  │ quotes                      │                                            │
+  ├─────────────────────────────┼────────────────────────────────────────────┤
+  │ Which stories you've        │ the filenames in craft\                    │
+  │ already done                │                                            │
+  ├─────────────────────────────┼────────────────────────────────────────────┤
+  │ The notebook ID             │ re-found by name each run — one cheap call │
+  ├─────────────────────────────┼────────────────────────────────────────────┤
+  │ The auth ritual             │ written into the command's Step 1          │
+  └─────────────────────────────┴────────────────────────────────────────────┘
+
+  There is one real gap, though. A fresh session would look at that notebook,
+  see 'Khwaab Paheli' by Neelesh Misra in the title list, and raise the exact
+  authorship objection I already raised — and you already ruled on it. You'd
+  waste a turn re-arguing a settled question. That's worth persisting.
+
+  That belongs in memory (auto-injected each session), not a CLAUDE.md:
+
+  Wrote 2 memories (ctrl+o to expand)
+
+● One memory file written. That's the whole gap closed.
+
+  You're good as-is. The setup is durable because the knowledge lives in files
+  that reload themselves, not in conversation:
+
+  - The command reloads every time you type /anulata — context loss can't touch
+  it
+  - The index and craft notes are on disk in your stories folder
+  - The one thing that was only in conversation (your authorship ruling) is now
+  in memory and auto-injects each session
+
+  When a CLAUDE.md would actually earn its place: if you develop preferences
+  that apply across everything you do in that folder — not just /anulata. Say
+  you start writing your own stories there and want a house style, or you want
+  every craft note to follow some format regardless of which command produced
+  it. Then a project CLAUDE.md makes sense. Right now there'd be nothing to put
+  in it that isn't already in the command file.
+
+  One thing to watch as this grows: after ~10 dissect sessions the craft\ folder
+  becomes a pile of files with no synthesis, and the cross-story patterns will
+  be sitting in there unnoticed. That's the point to build a merged profile — I
+  flagged it as deliberately skipped when we planned. Not yet.
+
+  Ready when you are for the first real run.
+
+✻ Brewed for 52s
+
+> /anulata Lamba Safar                                                          
+
+● Dissect mode on Lamba Safar. I have the notebook ID and title list from
+  earlier in this session, so I'll go straight to the battery — but starting a
+  fresh conversation, not reusing the top-10 one, so nothing bleeds in from the
+  other stories we discussed.
+
+  Scoping note upfront: source_ids aren't exposed by these tools, so I'm scoping
+  by explicit instruction. Weaker than ID-scoping — I'll flag anything that
+  looks like it drifted.
+
+  Called notebooklm (ctrl+o to expand)
+
+● Strong material. Query B — the pressure system.
+
+  Called notebooklm (ctrl+o to expand)
+
+● Query C — the turn and the landing.
+
+  Called notebooklm (ctrl+o to expand)
+
+● The title itself is doing structural work — let me confirm that before I write
+  it up. Query D.
+
+  Called notebooklm (ctrl+o to expand)
+
+● That confirmed it. Writing it up.
+
+● Write(craft\2026-07-22-lamba-safar.md)
+  ⎿  Wrote 230 lines to craft\2026-07-22-lamba-safar.md
+       1 # Lamba Safar — Craft Notes
+       3 > **Writer:** Anulata Raj Nair · **Mode:** dissect (single story
+       4 > **Source:** `#Relationships LAMBA SAFAR story by Anulata Raj N
+         air - The Neelesh Misra Project`
+       6 > **Scoping caveat:** `source_ids` are not exposed by the MCP to
+         om LAMBA SAFAR"). Weaker than ID-scoping. Nothing in the four re
+          and lines stayed consistent across all four queries, which is t
+         he main tell.
+       8 ---
+      10 ## 1. The one-line signature
+     … +371 lines (ctrl+o to expand)
+
+● craft\2026-07-22-lamba-safar.md
+
+  What this story is actually doing
+
+  The title is the structure. Lamba Safar names three journeys stacked on one
+  phrase: Vini's bus to Kottayam, Akhila's eighteen-year fall backwards into
+  memory ("Akhila to jaise kisi lambi yatra par nikal gayi thi. Atharah baras 
+  lambi yatra"), and the twenty-year distance to her father's doorstep ("ek bada
+  lamba safar tay kiya tha, thak gayi thi"). Same words, three magnitudes. The
+  title isn't a label on the story — it's the spine of it.
+
+  The best three lines in the piece are easy to miss. The narration establishes
+  an image: the daughter's voice dissolving into her mother's "jaise paani mein 
+  shakkar" — like sugar in water. Vini then reaches for what that implies: "Meri
+  aawaz bilkul aap ke jaisi hai na maa" — my voice is just like yours, isn't
+  it. And Akhila deflects using the same metaphor to take it back: "To mishri ki
+  dali hai wo meethi" — it's the rock sugar that's sweet.
+
+  On the surface, a mother being modest about her singing. Underneath, Vini is
+  saying I am biologically yours, admit it, and Akhila is answering the 
+  sweetness belongs to an object, not to blood. She kills the genetic claim
+  inside the exact image the narration just built. Neither of them says the real
+  word. That's the whole craft of the story in three lines.
+
+  The misdirection is honest. When Vini vanishes, we're locked inside Akhila's
+  panic — has she gone looking for Bhushan? — so we spend the entire middle
+  braced for the daughter to walk into the house of the man who abandoned her
+  mother. She walks into her grandfather's house instead. We were never lied to
+  by the narrator. We inherited a mother's fear and drew the wrong conclusion
+  ourselves.
+
+  And the inversion that makes Akhila un-condemnable: she didn't flee a cruel
+  father. She fled a loving one — a man who made her rasam rice when she felt
+  sick in early pregnancy. She ran because she loved him too much to hand him
+  her shame. Once you know that, twenty years of silence stops reading as
+  cowardice.
+
+  The ending refuses a speech. Akhila sits on the threshold and says nothing;
+  Nana looks at her, smiles, and goes to make coffee — for both of them, which
+  admits the granddaughter in the same gesture. She crossed the country and
+  couldn't cross the last step. He crosses it for her.
+
+  One honest craft note
+
+  She states her thesis out loud near the end — "hum kai baar hamare apno se 
+  itna pyaar karte hain ki unko takleef na ho isliye unse man nahi karte, yeh 
+  galat hai." By prose-fiction standards that's a flaw; it distrusts the images
+  already built. But this is written to be heard once, with no page to turn back
+  to. What saves it: she states the moral and then refuses to end on it. The
+  last thing that happens is the coffee. She tells you the meaning, then hands
+  you an image that proves it, and lets the image be last.
+
+  Six techniques to steal are in section 14 of the file.
+
+  Two caveats: scoping was by instruction rather than source_id (the MCP tools
+  don't expose source IDs) — though characters, objects and quotes stayed
+  consistent across all four queries, which is the main tell that it didn't
+  drift. And "Bas itni si thi yeh kahani" is Neelesh Misra's standard sign-off
+  across the show, not her writing.
+
+  Next natural move: Gunahgaar — you already have its plot and dilemma from the
+  shortlist, so a deep pass will show you clearly whether these thirteen lenses
+  earn their keep over a summary. Or /anulata openings for a sweep across all
+  110.
+
+✻ Cogitated for 6m 56s
+
+> /export                                                                       
+  ⎿  Conversation exported to: C:\Users\chandan.p\Pictures\Anulata_Raj_nair_Stor
+     ies\Loop_Creation_Anulata_Raj_Nair.txt
+
+> now what I want is you create something wherer I will have a new writer and   
+  notebook , i will enter the command it will create the sae loop for the the   
+  new writer also ? possible for example tomorrow I have a writer Kanchan pant  
+  I cant again guide claude to do this ...make it smart                         
+
+● You described a generator — "I enter the command, it creates the same loop for
+  the new writer." That's the right shape. Let me look at what's currently
+  writer-specific before I split it.
+
+  Read 1 file (ctrl+o to expand)
+
+● Only five things are writer-specific — name, pronouns, notebook match, output
+  folder, quote language. The other 150 lines are generic. So: one shared
+  battery, tiny per-writer stubs, and a generator that writes them.
+
+● Write(~\.claude\craft-battery.md)
+  ⎿  Wrote 159 lines to ..\..\.claude\craft-battery.md
+       1 # Craft Battery — shared engine for all writer-study commands
+       3 You were sent here by a per-writer stub command. That stub defin
+         ed these values — use them throughout and never hardcode anythin
+         g from another writer:
+       5 | Field | Meaning |
+       6 |---|---|
+       8 | `PRONOUN` | Their pronouns. If the stub didn't say, use they/t
+         hem — never guess from the name |
+       9 | `NOTEBOOK_MATCH` | String to match against NotebookLM notebook
+      10 | `OUTPUT_DIR` | Where craft notes get saved |
+     … +256 lines (ctrl+o to expand)
+
+● Write(~\.claude\commands\craft-new.md)
+  ⎿  Wrote 90 lines to ..\..\.claude\commands\craft-new.md
+      1 ---
+        name, get a working /<writer> command wired to their NotebookLM n
+        otebook.
+      4 allowed-tools: mcp__notebooklm__notebook_list, mcp__notebooklm__r
+      5 ---
+      6 
+      8 
+      9 This creates a personal slash command so the user can study a new
+        's overall signature, `/name <story>` for one story in depth. All
+        dan.p\.claude\craft-battery.md`; you are only writing a s
+     … +124 lines (ctrl+o to expand)
+
+● Now converting /anulata to a stub — same behaviour, but it becomes the first
+  user of the shared battery instead of a second copy of it.
+● Write(~\.claude\commands\anulata.md)
+  ⎿  Added 15 lines, removed 148 lines
+        4  allowed-tools: mcp__notebooklm__notebook_list, mcp__notebooklm
+           __notebook_query, mcp__notebooklm__refresh_auth, Write, Read, 
+           AskUserQuestion, Bash
+        5  ---
+        6  
+        7 -You are running **/anulata** — a craft-research workflow on th
+          -e storyteller **Anulata Raj Nair**.                           
+        7 +Study the craft of **Anulata Raj Nair**.                      
+        8  
+        9 -You are not a summarizer. You are a craft researcher and a sto
+          -ryteller yourself, studying another writer to learn how she wo
+          -rks. The user has heard her stories for months and wants to un
+          -derstand *the writer behind the story* — how she opens, where 
+          -she places silence, how she builds a dilemma with no clean ans
+          -wer, how she makes the listener read between the lines, how sh
+          -e hands the "wrong" character their reason.                   
+       10 -                                                              
+       11 -Generic literary commentary is a failure of this command. Ever
+          -y claim must trace to something the notebook actually returned
+          -.                                                             
+       12 -                                                              
+       13 -**Two fundamentally different jobs — do not blur them:**      
+       14 -                                                              
+       15 -- **`/anulata` with no story name** → *the writer.* Her signat
+          -ure across the whole body of work. What is true of her general
+          -ly.                                                           
+       16 -- **`/anulata <story name>` → *that story, and nothing else.**
+          -* Not "her craft, illustrated by this story." The craft **of t
+          -his one story**: what she does here specifically, how she pull
+          -s the listener in *here*, what she is directing your attention
+          - toward *in this piece*, where the beauty sits *in these parti
+          -cular lines*, where these specific pauses fall. If a sentence 
+          -in your answer would be equally true of a different story of h
+          -ers, it does not belong in a story-specific answer. Delete it 
+          -and find what is only true here.                              
+       17 -                                                              
+       18 -The user's argument is: **$ARGUMENTS**                        
+       19 -                                                              
+       20 ----                                                           
+       21 -                                                              
+       22 -## Step 1 — Find the notebook                                 
+       23 -                                                              
+       24 -Call `mcp__notebooklm__notebook_list`.                        
+       25 -                                                              
+       26 -**If it returns an authentication error:** stop and tell the u
+          -ser to run this themselves (it's an interactive browser login)
+          -:                                                             
+       27 -                                                              
+       28 -```                                                           
+       29 -! notebooklm-mcp-server auth                                  
+       30 -```                                                           
+       31 -                                                              
+       32 -Then call `mcp__notebooklm__refresh_auth` and retry `notebook_
+          -list` **once**. If it still fails, report the exact error and 
+          -stop. Never proceed without live sources — do not answer from 
+          -general knowledge about Hindi storytelling.                   
+       33 -                                                              
+       34 -Match "anulata" against notebook titles, case-insensitive, par
+          -tial match allowed.                                           
+       35 -- One match → use it.                                         
+       36 -- Several → list them and pick via `AskUserQuestion`.         
+       37 -- None → show the available titles and stop.                  
+       38 -                                                              
+       39 -Keep two things: the **notebook ID**, and the **list of source
+          - titles** (these are the story index — you need them for Step 
+          -2 and you must never cite a story title that isn't in this lis
+          -t).                                                           
+       40 -                                                              
+       41 -## Step 2 — Pick the mode                                     
+       42 -                                                              
+       43 -| `$ARGUMENTS` looks like | Mode |                            
+        9 +| Field | Value |                                             
+       10  |---|---|
+       45 -| empty | **profile** — her cross-story craft signature |     
+       46 -| matches / resembles a source title | **dissect** — one story
+          -, all nine lenses |                                           
+       47 -| a craft word (opening, pause, silence, dilemma, subtext, end
+          -ing, relationships, perspective, voice…) | **lens** — that one
+          - lens across all stories |                                    
+       48 -| starts `draft:`, or is pasted prose, or is a file path | **a
+          -pply** — critique the user's own writing against her craft |  
+       49 -| starts `seeds:` | **seeds** — new premises built on her stru
+          -ctures |                                                      
+       11 +| `WRITER` | Anulata Raj Nair |                               
+       12 +| `PRONOUN` | she/her |                                       
+       13 +| `NOTEBOOK_MATCH` | anulata |                                
+       14 +| `OUTPUT_DIR` | `C:\Users\chandan.p\Pictures\Anulata_Raj_nair
+          +_Stories\craft` |                                             
+       15 +| `QUOTE_STYLE` | roman-script Hinglish (NOT Devanagari — the 
+          +reader cannot read Devanagari comfortably), each line followed
+          + by its English meaning on the next line |                    
+       16 +| `ARGUMENT` | $ARGUMENTS |                                   
+       17  
+       51 -Genuinely ambiguous → ask via `AskUserQuestion` with the candi
+          -date readings. Do not assume.                                 
+       18 +Now `Read` the file `C:\Users\chandan.p\.claude\craft-battery.
+          +md` and follow it exactly, using the values above.            
+       19  
+       53 -In **apply** mode, if the argument is a file path, `Read` it f
+          -irst.                                                         
+       54 -                                                              
+       55 -### Scoping a single story (dissect mode) — do not skip this  
+       56 -                                                              
+       57 -When the notebook holds many stories, an unscoped query makes 
+          -NotebookLM **blend all of them into one averaged answer**. Tha
+          -t is the main failure mode of this command. In dissect mode:  
+       58 -                                                              
+       59 -1. Get the source list for the notebook. If `notebook_list` do
+          -esn't expose individual source titles, ask the notebook direct
+          -ly: *"List every source in this notebook by its exact title, n
+          -umbered. Titles only, nothing else."*                         
+       60 -2. Match the user's argument to exactly one source title. Seve
+          -ral plausible → `AskUserQuestion`. None → show the real titles
+          - and stop.                                                    
+       61 -3. **Pass that source's `source_ids` on every query.** This is
+          - the reliable scope.                                          
+       62 -4. If `source_ids` cannot be resolved, fall back to naming the
+          - story in every query plus this instruction: *"Answer ONLY fro
+          -m the story '<title>'. Do not draw on any other story in this 
+          -notebook. If a point cannot be supported from that story alone
+          -, say so instead of borrowing from another."* Then say in your
+          - final output that scoping was by instruction, not by source I
+          -D — it is weaker and cross-contamination is possible.         
+       63 -                                                              
+       64 -In **profile** and **lens** mode the opposite applies: query u
+          -nscoped across all sources deliberately, and **name which stor
+          -ies** each pattern was observed in. A pattern claimed without 
+          -naming at least two stories is not a pattern.                 
+       65 -                                                              
+       66 -## Step 3 — The query battery                                 
+       67 -                                                              
+       68 -Use `mcp__notebooklm__notebook_query` against the notebook ID.
+          - **Reuse the returned `conversation_id`** across all three cal
+          -ls so context carries forward.                                
+       69 -                                                              
+       70 -Three calls, not nine — each query is slow.                   
+       71 -                                                              
+       72 -In **dissect** mode, name the specific story in every query an
+          -d pass its `source_ids` if you can identify it. In **lens** mo
+          -de, run only the query containing that lens, and go deeper on 
+          -it instead of broader.                                        
+       73 -                                                              
+       74 -End **every** query with this exact evidence clause:          
+       75 -                                                              
+       76 -> "Quote her actual lines as evidence, written in roman-script
+          - Hinglish (NOT Devanagari — the reader cannot read Devanagari 
+          -comfortably), each followed by its English meaning on the next
+          - line. If you cannot find a real line in the sources, say so p
+          -lainly — do not invent a quote or present a paraphrase as verb
+          -atim."                                                        
+       77 -                                                              
+       78 -**Query A — entry & architecture**                            
+       79 -1. **Opening move.** How do her first lines land? Does she ope
+          -n on a physical object, a line of dialogue, a domestic action 
+          -mid-motion, or a wound already in progress? What contract does
+          - the opening make with the listener — what question does it pl
+          -ant?                                                          
+       80 -2. **Relationship architecture.** Who wants what from whom. Wh
+          -ere the power sits and who knows it. The unspoken debt, duty o
+          -r obligation holding these people together against their own w
+          -ishes.                                                        
+       81 -3. **Texture.** The concrete domestic detail — the kitchen, th
+          -e chai going cold, the dupatta, the phone that doesn't ring — 
+          -she uses to carry emotion instead of naming the emotion.      
+       82 -                                                              
+       83 -**Query B — the pressure system**                             
+       84 -4. **The pause (thehrāv).** Where she slows down, stops, lets 
+          -silence do the work. What she deliberately withholds from the 
+          -listener, and for how long, before releasing it.              
+       85 -5. **The dilemma.** The moral fork with no clean answer. Speci
+          -fically: how she loads *both* sides so that neither choice com
+          -es free, and the listener cannot simply pick.                 
+       86 -6. **Subtext — reading between the lines.** Lines where what i
+          -s said is not what is meant. The sentence that means its oppos
+          -ite. What the characters are actually negotiating underneath t
+          -he surface conversation.                                      
+       87 -                                                              
+       88 -**Query C — the turn & the landing**                          
+       89 -7. **The perspective turn.** The moment the character we were 
+          -judging is given their reason. Where in the story it arrives, 
+          -and how she prepares it so it *reverses the listener* rather t
+          -han merely excusing the character.                            
+       90 -8. **The ending.** Open or resolved? What work is the final li
+          -ne doing — asking a question, leaving an image, showing a smal
+          -l ordinary act?                                               
+       91 -9. **The narrator's voice.** Sentence rhythm and length. How c
+          -lose or far she stands from her character. Where she addresses
+          - the listener directly, and where she speaks as herself.      
+       92 -                                                              
+       93 -**Query D — reader direction (dissect mode only; skip in profi
+          -le/lens)**                                                    
+       94 -10. **Where she points your attention.** At each stage of THIS
+          - story, what is she making the listener watch — and what is sh
+          -e quietly steering them away from until she's ready? Name the 
+          -moment she deliberately lets you believe something wrong.     
+       95 -11. **How she pulls you in, here.** The specific hooks in THIS
+          - story that make a listener unable to leave — a withheld name,
+          - an unanswered question, a promise made early and paid late. N
+          -ame them and where they fall.                                 
+       96 -12. **The beauty.** The two or three most beautiful lines in T
+          -HIS story specifically — not her prettiest lines generally. Sa
+          -y what makes each one land: the image, the rhythm, the restrai
+          -nt, the word she chose over the obvious one.                  
+       97 -13. **What she wants you to carry out.** After the last line, 
+          -what is the listener meant to be left holding? A question, a g
+          -uilt, a softening toward someone they had judged? What in the 
+          -text does that work?                                          
+       98 -                                                              
+       99 -**apply** and **seeds** modes run A–C first anyway. The extrac
+          -ted patterns are the standard you then judge or build against.
+          - Never critique a draft or generate a premise from generic "em
+          -otional Hindi story" instincts — every recommendation must poi
+          -nt back to a technique the notebook actually showed you.      
+      100 -                                                              
+      101 -## Step 4 — Answer on screen, and save the file               
+      102 -                                                              
+      103 -Do both. The on-screen answer is the full analysis, not a teas
+          -er.                                                           
+      104 -                                                              
+      105 -Save to: `C:\Users\chandan.p\Pictures\Anulata_Raj_nair_Stories
+          -\craft\<YYYY-MM-DD>-<short-kebab-slug>.md`                    
+      106 -                                                              
+      107 -Create the `craft` folder first if it doesn't exist (`mkdir -p
+          -` via Bash). Get today's date from the environment context, no
+          -t from memory.                                                
+      108 -                                                              
+      109 -Structure:                                                    
+      110 -                                                              
+      111 -```markdown                                                   
+      112 -# <Story or Topic> — Craft Notes                              
+      113 -> **Writer:** Anulata Raj Nair · **Mode:** <profile|dissect|le
+          -ns|apply|seeds>                                               
+      114 -> **Sources used:** <actual source titles> · **Date:** <today>
+      115 -                                                              
+      116 -## 1. The one-line signature                                  
+      117 -(What she is actually doing, in a single sentence. Earn this l
+          -ine.)                                                         
+      118 -                                                              
+      119 -## 2. How she opens                                           
+      120 -## 3. The relationships underneath                            
+      121 -## 4. Where she pauses — and what she withholds               
+      122 -## 5. The dilemma (both sides, loaded)                        
+      123 -## 6. Reading between the lines                               
+      124 -## 7. The perspective turn                                    
+      125 -## 8. How she lands it                                        
+      126 -## 9. Her voice on the page                                   
+      127 -                                                              
+      128 -## 10. Where she points your attention        (dissect mode on
+          -ly)                                                           
+      129 -## 11. How she pulls you in, here             (dissect mode on
+          -ly)                                                           
+      130 -## 12. The beauty — the lines worth rereading (dissect mode on
+          -ly)                                                           
+      131 -## 13. What she wants you to carry out        (dissect mode on
+          -ly)                                                           
+      132 -                                                              
+      133 -## 14. What to steal                                          
+      134 -(3-6 techniques written as moves you can make in your own writ
+          -ing — not as admiration.)                                     
+      135 -                                                              
+       20  ---
+      137 -*Craft notes from the NotebookLM sources. Quotes are as the so
+          -urces rendered them; anything unverified is marked "not verbat
+          -im".*                                                         
+      138 -```                                                           
+       21  
+      140 -Sections 2–9 each carry four beats:                           
+      141 -- **The move** — what she does                                
+      142 -- **Why it works** — the mechanism on the listener            
+      143 -- **Her line** — in roman Hinglish                            
+      144 -- **Meaning** — the English                                   
+       22 +**Notebook as of 2026-07-22:** `Stories BY Anulata_Raj_Nair` —
+          + 113 sources, 110 distinct titles.                            
+       23  
+      146 -In **apply** mode, sections 2–9 become three beats instead: *w
+          -hat your draft does now → what she does → the specific fix, in
+          - one sentence.*                                               
+       24 +**Writer-specific notes:**                                    
+       25  
+      148 -In **lens** mode, keep only the relevant section and go deep —
+          - five examples of one lens beats one example of nine.         
+      149 -                                                              
+      150 -In **seeds** mode, replace sections 2–9 with the premises them
+          -selves; each seed states which of her structures it is built o
+          -n.                                                            
+      151 -                                                              
+      152 -## Step 5 — Honesty rules (non-negotiable)                    
+      153 -                                                              
+      154 -- Only what the notebook returned. No invented quotes, no inve
+          -nted story titles, no "she typically…" without evidence behind
+          - it.                                                          
+      155 -- These sources are likely auto-generated YouTube transcripts.
+          - Hindi auto-transcription is often rough — when a quote looks 
+          -garbled or uncertain, mark it `(transcript uncertain)` rather 
+          -than smoothing it into something elegant she may never have sa
+          -id.                                                           
+      156 -- If the notebook holds too few stories to support a claim abo
+          -ut her *pattern*, say "one story is not a pattern" and scope t
+          -he claim down. Do not generalize to fill the template.        
+      157 -- If a lens genuinely isn't present in the sources, write "not
+          - visible in these sources" under that heading. An honest gap i
+          -s more useful than a confident guess.                         
+      158 -- All analysis in English. Only her quoted lines stay Hinglish
+          -.                                                             
+      159 -                                                              
+      160 -## Step 6 — Report back                                       
+      161 -                                                              
+      162 -Give the saved path, then one short paragraph: the single most
+          - interesting thing you learned about how she works, stated as 
+          -a craft insight the user can act on. Then offer the natural ne
+          -xt step — a dissect on a specific story, a deeper pass on one 
+          -lens, or an `apply` run on their own draft.                   
+       26 +- **Neelesh Misra narrates the entire corpus.** Delivery and v
+          +ocal pauses are his; sentence construction, structure and dile
+          +mma are hers. `"Bas itni si thi yeh kahani"` is his standard s
+          +how sign-off, not her line.                                   
+       27 +- **Authorship is settled — do not re-raise it.** About 37 tit
+          +les carry no writer credit and one names Neelesh Misra in the 
+          +title. The user has confirmed all 110 are hers; the channel's 
+          +title credits are simply inconsistent. Do not propose filterin
+          +g sources on authorship grounds.                              
+       28 +- **Known duplicates:** `Gunahgaar` (identical, twice), `Pyari
+          + Gudiya` (standalone + *In The Dark*), `Sneha` (Project + YKIB
+          + S3).                                                         
+       29 +- **Story index:** `craft\STORY-INDEX.md` — all 110 titles gro
+          +uped by series and season.                                    
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Done. Tomorrow you type:
+
+  /craft-new Kanchan Pant
+
+  It finds her notebook, asks the two things it must not guess (pronouns, and
+  how to render quotes if the language isn't English), confirms the output
+  folder, writes /kanchan, creates the folder, and offers to build the story
+  index. After that /kanchan and /kanchan <story name> behave exactly like
+  /anulata does now.
+
+  The structure that makes this work:
+
+  ┌───────────────────────┬───────┬──────────────────────────────────────────┐
+  │         File          │ Lines │                   Role                   │
+  ├───────────────────────┼───────┼──────────────────────────────────────────┤
+  │ craft-battery.md      │ 159   │ All 13 lenses, modes, scoping, honesty   │
+  │                       │       │ rules — writer-agnostic                  │
+  ├───────────────────────┼───────┼──────────────────────────────────────────┤
+  │ commands/anulata.md   │ 29    │ Five values + notebook notes → reads the │
+  │                       │       │  battery                                 │
+  ├───────────────────────┼───────┼──────────────────────────────────────────┤
+  │ commands/craft-new.md │ —     │ The generator                            │
+  └───────────────────────┴───────┴──────────────────────────────────────────┘
+
+  /anulata went from 163 lines to 29 and behaves identically — it's now the
+  first consumer of the battery rather than a second copy of it. That's the
+  point: edit craft-battery.md once and every writer command improves at the 
+  same time. If I'd generated a full copy per writer, your third writer would be
+  running last month's lenses.
+
+  Three things I folded in from what we learned today, so the next writer
+  benefits without you re-teaching:
+
+  - Fresh conversation for every dissect — reusing a corpus-wide conversation_id
+  bleeds other stories in. I only realised that mid-way through Lamba Safar.
+  - Writer vs performer separation is now a standing honesty rule, not an
+  Anulata footnote. Any narrated corpus has this problem.
+  - "Does the title do structural work?" is now a standard dissect question.
+  That's what found the three-journey spine.
+
+  The Anulata-specific facts that would otherwise be lost — Neelesh Misra
+  narrates, authorship is settled, the three duplicate sources — live in the
+  stub, so they load every time you run it.
+
+  One honest limitation: /craft-new can't create a NotebookLM notebook or upload
+  videos. You still push the sources yourself first, then run it.
+
+✻ Brewed for 2m 34s

@@ -1,0 +1,13 @@
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local editor & project settings
+.claude/settings.local.json
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
